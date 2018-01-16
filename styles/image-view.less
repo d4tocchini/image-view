@@ -1,12 +1,10 @@
-@import "ui-variables";
-
-@spacing: @component-padding/2;
-@transparent-background-image: "atom://image-view/images/transparent-background.png";
-
 .image-view {
+
+  --transparent-background-image: url("atom://image-view/images/transparent-background.png");
+
   display: flex;
   flex-direction: column;
-  background-color: @pane-item-background-color;
+  background-color: var(--bg);
 
 
   // Image Controls -------------------
@@ -16,14 +14,12 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: @spacing;
-    border-bottom: 1px solid @panel-heading-border-color;
-    background-color: @panel-heading-background-color;
-
+    padding: var(--spacer-1);
+    border-bottom: 1px solid var(--border);
 
     // TODO: BEM-ify these classes
     .btn-group {
-      margin: @spacing;
+      margin: var(--spacer-1);
     }
 
     .reset-zoom-button {
@@ -36,13 +32,13 @@
       cursor: default;
     }
   }
-  
+
   &-ColorPicker {
     display: inline-block;
     position: relative;
     width: 24px;
     height: 24px;
-    margin: @spacing;
+    margin: var(--spacer-1);
     vertical-align: middle;
     font-size: 0;
     border-radius: 22px;
@@ -60,13 +56,13 @@
     &--white {
       color: #000;
       background-color: #fff;
-      background-image: url(@transparent-background-image);
+      background-image: var(--transparent-background-image);
     }
 
     &--black {
       color: #fff;
       background-color: #000;
-      background-image: url(@transparent-background-image);
+      background-image: var(--transparent-background-image);
     }
   }
 
@@ -95,12 +91,12 @@
 
   &[background="white"] {
     background-color: white;
-    background-image: url(@transparent-background-image);
+    background-image: var(--transparent-background-image);
   }
 
   &[background="black"] {
     background-color: black;
-    background-image: url(@transparent-background-image);
+    background-image: var(--transparent-background-image);
   }
 
 
