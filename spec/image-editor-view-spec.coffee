@@ -94,7 +94,7 @@ describe "ImageEditorView", ->
 
       runs ->
         statusBar = workspaceElement.querySelector('status-bar')
-        imageSizeStatus = statusBar.leftPanel.querySelector('.status-image')
+        imageSizeStatus = statusBar.leftPanel.querySelector('.image-view-Status-label')
         expect(imageSizeStatus).toExist()
 
     it "displays the size of the image", ->
